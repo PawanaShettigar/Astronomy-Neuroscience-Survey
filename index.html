@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Would You Choose the Stars... Even if You Forgot Them?</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            color: #ffffff;
+            background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2560&q=80');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: brightness(0.5);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: rgba(0, 0, 50, 0.8);
+            padding: 2em;
+            border-radius: 20px;
+            margin-top: 2em;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .animated-astronaut {
+            display: block;
+            margin: 2em auto;
+            width: 200px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .section {
+            margin-bottom: 2em;
+        }
+        label, input, textarea, select {
+            display: block;
+            width: 100%;
+            margin-top: 0.5em;
+            margin-bottom: 1em;
+        }
+        textarea {
+            height: 80px;
+        }
+        input[type="submit"] {
+            background: #007bff;
+            border: none;
+            color: white;
+            padding: 1em;
+            font-size: 1em;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background: #0056b3;
+        }
+        .thank-you {
+            text-align: center;
+            margin-top: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="animated-astronaut" src="https://cdn-icons-png.flaticon.com/512/3216/3216101.png" alt="Astronaut saying hi">
+        <h1>Would You Choose the Stars... Even if You Forgot Them?</h1>
+        <p style="text-align:center;">Hi! I'm your friendly astronaut 🧑‍🚀<br>Please take a moment to answer this mind-bending survey!</p>
+
+        <form>
+            <div class="section">
+                <h2>Section 1: Identity</h2>
+                <label>Full Name (Required)
+                    <input type="text" name="fullName" required>
+                </label>
+
+                <label>Current Role (Required)</label>
+                <label><input type="radio" name="role" value="Student" required> Student</label>
+                <label><input type="radio" name="role" value="Working professional"> Working professional</label>
+                <label><input type="radio" name="role" value="Researcher"> Researcher</label>
+                <label><input type="radio" name="role" value="Other"> Other (please specify):</label>
+                <input type="text" name="otherRole">
+
+                <label>What are you studying / field of work? (Required)
+                    <input type="text" name="field" required>
+                </label>
+            </div>
+
+            <div class="section">
+                <h2>Section 2: Hypothetical Experience</h2>
+                <label>Q1: Would you go on a 6-month deep space journey if the memory gets erased afterward?
+                    <select name="q1" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Maybe">Maybe</option>
+                        <option value="Need context">I need more context</option>
+                    </select>
+                </label>
+
+                <label>Q2: Specify the reason for your answer (optional)
+                    <textarea name="q2_reason"></textarea>
+                </label>
+            </div>
+
+            <div class="section">
+                <h2>Section 3: Emotional & Psychological Dimensions</h2>
+                <label>Q3: What scares you most about long-term space travel? (Select all that apply)</label>
+                <label><input type="checkbox" name="q3" value="Memory loss"> Memory loss or psychological changes</label>
+                <label><input type="checkbox" name="q3" value="Isolation"> Emotional isolation or loneliness</label>
+                <label><input type="checkbox" name="q3" value="Conflicts"> Conflicts in confined spaces</label>
+                <label><input type="checkbox" name="q3" value="Separation"> Separation from loved ones</label>
+                <label><input type="checkbox" name="q3" value="Physical damage"> Physical damage</label>
+                <label><input type="checkbox" name="q3" value="Nothing"> Nothing – I’d love it!</label>
+
+                <label>Q4: Do you believe an experience you can't remember still changes who you are?
+                    <select name="q4" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Not sure">Not sure</option>
+                    </select>
+                </label>
+
+                <label>Q5: What would help astronauts stay emotionally and mentally healthy in deep space?
+                    <textarea name="q5" required></textarea>
+                </label>
+
+                <label>Q6: If a memory-erasing mission helped humanity, is it worth it?
+                    <select name="q6" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Conditions">Only under strict conditions</option>
+                        <option value="Unsure">I don’t know</option>
+                    </select>
+                </label>
+
+                <label>Q7: Can memory influence us even if we forget the experience?
+                    <select name="q7" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Not sure">Not sure</option>
+                    </select>
+                </label>
+
+                <label>Q8: Do feelings/habits remain even if memory is erased?
+                    <select name="q8" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes, deep down</option>
+                        <option value="No">No, it’s erased</option>
+                        <option value="Unsure">I don’t know</option>
+                    </select>
+                </label>
+
+                <label>Q9: Should astronauts who forget their journey still count?
+                    <select name="q9" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes — experience isn’t just memory</option>
+                        <option value="No">No — memory is everything</option>
+                        <option value="Depends">Depends on the case</option>
+                    </select>
+                </label>
+
+                <label>Q10: Does the brain adapt differently in space?
+                    <select name="q10" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Maybe">Maybe</option>
+                    </select>
+                </label>
+
+                <label>Q11: Does space travel rewire how we store emotions/memories?
+                    <select name="q11" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Possibly">Possibly</option>
+                    </select>
+                </label>
+
+                <label>Q12: If you’re told you went to space but remember nothing — are you changed?
+                    <select name="q12" required>
+                        <option value="">Choose one</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="Maybe">Maybe</option>
+                    </select>
+                </label>
+            </div>
+
+            <input type="submit" value="Submit Survey">
+        </form>
+
+        <div class="thank-you">
+            <img class="animated-astronaut" src="https://cdn-icons-png.flaticon.com/512/3216/3216101.png" alt="Thank you astronaut">
+            <h2>Thank You for Your Cosmic Insight!</h2>
+            <p>Created by Pawana ✨</p>
+        </div>
+    </div>
+</body>
+</html>
